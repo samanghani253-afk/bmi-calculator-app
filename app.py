@@ -1,89 +1,5 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="BMI Calculator",
-    page_icon="🩺",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
-# Custom CSS for modern healthcare look
-# Custom CSS for 3D attractive background and healthcare UI
-st.markdown("""
-<style>
-    /* 3D Animated Gradient Background */
-    .stApp {
-        background: linear-gradient(-45deg, #e0f7fa, #80deea, #4dd0e1, #b2ebf2);
-        background-size: 400% 400%;
-        animation: gradientBG 15s ease infinite;
-    }
-    
-    @keyframes gradientBG {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-    /* Glassmorphism container for the main app */
-    .block-container {
-        background: rgba(255, 255, 255, 0.65);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        padding: 3rem !important;
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-    /* 3D Result Box */
-    .result-box {
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #f0f2f6;
-        padding: 30px;
-        border-radius: 15px;
-        background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
-        text-align: center;
-        margin-top: 20px;    initial_sidebar_state="collapsed"
-)
-# Custom CSS for modern healthcare look
-# Custom CSS for 3D attractive background and healthcare UI
-st.markdown("""
-<style>
-    /* 3D Animated Gradient Background */
-    .stApp {
-        background: linear-gradient(-45deg, #e0f7fa, #80deea, #4dd0e1, #b2ebf2);
-        background-size: 400% 400%;
-        animation: gradientBG 15s ease infinite;
-    }
-    
-    @keyframes gradientBG {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-    /* Glassmorphism container for the main app */
-    .block-container {
-        background: rgba(255, 255, 255, 0.65);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        padding: 3rem !important;
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-    /* 3D Result Box */
-    .result-box {
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #f0f2f6;
-        padding: 30px;
-        border-radius: 15px;
-        background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
-        text-align: center;
-        margin-top: 20px;import streamlit as st
-
 # -----------------------------------------------------------------------------
 # Core Calculation Logic
 # -----------------------------------------------------------------------------
@@ -146,36 +62,92 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# Custom CSS for modern healthcare look
+# Custom CSS for 3D attractive background and healthcare UI
 st.markdown("""
 <style>
-    .result-box {
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #f0f2f6;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
+    /* 3D Animated Gradient Background */
+    .stApp {
+        background: linear-gradient(-45deg, #e0f7fa, #80deea, #4dd0e1, #b2ebf2);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
     }
+    
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Glassmorphism container for the main app */
+    .block-container {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 3rem !important;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* 3D Result Box */
+    .result-box {
+        padding: 30px;
+        border-radius: 15px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        box-shadow:  20px 20px 60px rgba(0,0,0,0.05), 
+                    -20px -20px 60px rgba(255,255,255,0.8);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        transform: translateZ(0);
+        transition: transform 0.3s ease;
+    }
+    .result-box:hover {
+        transform: translateY(-5px);
+    }
+    
     .bmi-value {
-        font-size: 48px;
-        font-weight: bold;
-        color: #1f77b4;
+        font-size: 64px;
+        font-weight: 800;
+        background: -webkit-linear-gradient(45deg, #1f77b4, #00d2ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
     .bmi-category {
-        font-size: 24px;
-        font-weight: 500;
-        margin-top: -10px;
+        font-size: 28px;
+        font-weight: 600;
+        margin-top: -5px;
+        letter-spacing: 1px;
     }
     .disclaimer-text {
-        font-size: 12px;
-        color: #666;
+        font-size: 13px;
+        color: #555;
         text-align: justify;
         padding-top: 20px;
-        border-top: 1px solid #ddd;
+        border-top: 1px solid rgba(0,0,0,0.1);
         margin-top: 40px;
     }
+    
+    /* 3D Floating Visual */
+    .floating-visual {
+        font-size: 80px;
+        text-align: center;
+        animation: float 4s ease-in-out infinite;
+        margin-bottom: 20px;
+        text-shadow: 0 20px 30px rgba(0,0,0,0.1);
+    }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
 </style>
+
+<div class="floating-visual">🧬 ⚖️ 🩺</div>
 """, unsafe_allow_html=True)
 
 
