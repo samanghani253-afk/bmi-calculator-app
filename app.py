@@ -1,4 +1,82 @@
-import streamlit as st
+    initial_sidebar_state="collapsed"
+)
+# Custom CSS for modern healthcare look
+# Custom CSS for 3D attractive background and healthcare UI
+st.markdown("""
+<style>
+    /* 3D Animated Gradient Background */
+    .stApp {
+        background: linear-gradient(-45deg, #e0f7fa, #80deea, #4dd0e1, #b2ebf2);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+    }
+    
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    /* Glassmorphism container for the main app */
+    .block-container {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 3rem !important;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    /* 3D Result Box */
+    .result-box {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f0f2f6;
+        padding: 30px;
+        border-radius: 15px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+        text-align: center;
+        margin-top: 20px;    initial_sidebar_state="collapsed"
+)
+# Custom CSS for modern healthcare look
+# Custom CSS for 3D attractive background and healthcare UI
+st.markdown("""
+<style>
+    /* 3D Animated Gradient Background */
+    .stApp {
+        background: linear-gradient(-45deg, #e0f7fa, #80deea, #4dd0e1, #b2ebf2);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+    }
+    
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    /* Glassmorphism container for the main app */
+    .block-container {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 3rem !important;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    /* 3D Result Box */
+    .result-box {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f0f2f6;
+        padding: 30px;
+        border-radius: 15px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+        text-align: center;
+        margin-top: 20px;import streamlit as st
 
 # -----------------------------------------------------------------------------
 # Core Calculation Logic
